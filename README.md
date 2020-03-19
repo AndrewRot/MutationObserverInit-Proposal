@@ -23,7 +23,7 @@ observer.observe(document.documentElement, {
 This approach monitors the DOM for changes to the number of inputs on the page. This approach is inefficent as it requires you to observe the root element of the page and listenn for changes in _all_ of the subtree nodes. This observer could fire far too many times if the DOM is updating often, causing unnecessary work to be done, when all we care about is mutation to certain element types on the page.
 
 ## Similar capabilities
-There are similar capabilities already available to monitor only elements with certain attributes, see (`attributeFilter`)[https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/attributeFilter].
+There are similar capabilities already available to monitor only elements with certain attributes, see [`attributeFilter`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/attributeFilter).
 
 ## Proposed Functionality
 
@@ -34,7 +34,6 @@ New property: `elementTypeFilter` (optional)
 
 Example:
 ```
-let inputs = document.getElementsByTagName('input');
 let observer = new MutationObserver(mutations) => {
   mutations.forEach(mutation => {
     // immediate handle on all new 'input' elements on the page...
