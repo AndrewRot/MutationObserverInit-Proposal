@@ -30,7 +30,7 @@ There are similar capabilities already available to monitor only elements with c
 I suggest there should be a similar filter but for watching specific changes to element types on the page so that you can watch for changes in the number of inputs (amongst other elements) on the page.
 
 New property: `elementTypeFilter` (optional)
-- An array of specific element types to be monitored. If this property isn't included, `MutationObserverInit` will still trigger notifications in the same way as previous to prevent backwards compatibility with existing web functionaly (mainly for efficiency). No default value
+- An array of specific element types to be monitored. If this property isn't included, `MutationObserverInit` will still trigger notifications in the same way as previous to prevent backwards compatibility with existing web functionaly. No default value
 
 Example:
 ```
@@ -48,4 +48,4 @@ observer.observe(document.documentElement, {
 });
 ```
 
-This would allow a user to instantly monitor changes to the DOM involving specific elements to the page while increasing efficiency of the observer.
+This would allow a user to more easily instantly monitor changes to the DOM involving specific elements to the page.
